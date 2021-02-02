@@ -1,0 +1,77 @@
+{
+  "name": "react-typescript-scaffolding",
+  "version": "1.0.0",
+  "description": "Typescript project using React",
+  "main": "index.tsx",
+  "scripts": {
+    "build": "webpack --mode=production --config webpack.config.ts",
+    "format": "prettier --config .prettierrc src/ --write",
+    "lint": "tsc --noEmit && eslint --ext .tsx,ts src/ --fix",
+    "staging": "webpack --mode 'production' && npx serve dist -s",
+    "start": "webpack serve --mode=development --config webpack.config.dev.ts",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zikeron/react-typescript-scaffolding.git"
+  },
+  "keywords": [
+    "Typescript",
+    "React",
+    "react-hooks"
+  ],
+  "author": "Alejandro Cortez <acortez.dev@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zikeron/react-typescript-scaffolding/issues"
+  },
+  "homepage": "https://github.com/zikeron/react-typescript-scaffolding#readme",
+  "dependencies": {
+    "@types/jest": "^26.0.20",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "terser-webpack-plugin": "^5.1.1",
+    "typescript": "^4.1.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "@babel/preset-typescript": "^7.12.7",
+    "@babel/runtime": "^7.12.5",
+    "@types/fork-ts-checker-webpack-plugin": "^0.4.5",
+    "@types/mini-css-extract-plugin": "^1.2.2",
+    "@types/terser-webpack-plugin": "^5.0.2",
+    "@types/webpack": "^4.41.26",
+    "@types/webpack-dev-server": "^3.11.1",
+    "@typescript-eslint/eslint-plugin": "^4.14.2",
+    "@typescript-eslint/parser": "^4.14.2",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.0.1",
+    "eslint": "^7.19.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-typescript": "^12.0.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.1.3",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "eslint-webpack-plugin": "^2.4.3",
+    "fork-ts-checker-webpack-plugin": "^6.1.0",
+    "html-loader": "^1.3.2",
+    "html-webpack-plugin": "^4.5.1",
+    "jest": "^26.6.3",
+    "jest-css-modules-transform": "^4.2.0",
+    "mini-css-extract-plugin": "^1.3.5",
+    "prettier": "^2.2.1",
+    "ts-node": "^9.1.1",
+    "webpack": "^5.19.0",
+    "webpack-cli": "^4.4.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}

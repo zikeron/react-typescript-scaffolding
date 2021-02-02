@@ -1,0 +1,14 @@
+# dependencies
+node_modules/
+
+# IDEs
+.idea/
+nbproject/
+.vscode/
+
+# Compiled files
+dist/
+bundle/
+
+# Enviroment
+.env
