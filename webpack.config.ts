@@ -103,7 +103,7 @@ const config: webpack.Configuration = {
     new webpack.HotModuleReplacementPlugin(),
     new MiniCssExtractPlugin({
       filename: 'assets/[name].css'
-    }),
+    })
   ]
 };
 

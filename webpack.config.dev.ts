@@ -1,17 +1,17 @@
-import path from "path";
-import webpack from "webpack";
-import HtmlWebpackPlugin from "html-webpack-plugin";
-import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import ESLintPlugin from "eslint-webpack-plugin";
+import path from 'path';
+import webpack from 'webpack';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import ESLintPlugin from 'eslint-webpack-plugin';
 
 const config: webpack.Configuration = {
-  mode: "development",
-  entry: "./src/index.tsx",
+  mode: 'development',
+  entry: './src/index.tsx',
   output: {
-    path: path.resolve(__dirname, "dist"),
-    publicPath: "/",
-    filename: "bundle.js"
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
+    filename: 'bundle.js'
   },
   module: {
     rules: [
@@ -19,12 +19,12 @@ const config: webpack.Configuration = {
         test: /\.(ts|js)x?$/i,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
             presets: [
-              "@babel/preset-env",
-              "@babel/preset-react",
-              "@babel/preset-typescript"
+              '@babel/preset-env',
+              '@babel/preset-react',
+              '@babel/preset-typescript'
             ]
           }
         }
@@ -35,33 +35,33 @@ const config: webpack.Configuration = {
           {
             loader: MiniCssExtractPlugin.loader
           },
-          "css-loader"
+          'css-loader'
         ]
       }
     ]
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"]
+    extensions: ['.tsx', '.ts', '.js']
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./public/index.html",
-      filename: "./index.html"
+      template: './public/index.html',
+      filename: './index.html'
     }),
     new webpack.HotModuleReplacementPlugin(),
     new MiniCssExtractPlugin({
-      filename: "assets/[name].css"
+      filename: 'assets/[name].css'
     }),
     new ForkTsCheckerWebpackPlugin({
       async: false
     }),
     new ESLintPlugin({
-      extensions: ["js", "jsx", "ts", "tsx"]
+      extensions: ['js', 'jsx', 'ts', 'tsx']
     })
   ],
-  devtool: "inline-source-map",
+  devtool: 'inline-source-map',
   devServer: {
-    contentBase: "./",
+    contentBase: './',
     historyApiFallback: true,
     port: 3000,
     hot: true

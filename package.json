@@ -5,8 +5,8 @@
   "main": "index.tsx",
   "scripts": {
     "build": "webpack --mode=production --config webpack.config.ts",
-    "format": "prettier --config .prettierrc src/ --write",
-    "lint": "tsc --noEmit && eslint --ext .tsx,ts src/ --fix",
+    "format": "prettier --config .prettierrc --write '{*.js,*.ts,src/**/*.{ts,tsx,css}'}",
+    "lint": "tsc --noEmit && eslint --ext .tsx,.ts src/ --fix",
     "staging": "webpack --mode 'production' && npx serve dist -s",
     "start": "webpack serve --mode=development --config webpack.config.dev.ts",
     "test": "jest"
